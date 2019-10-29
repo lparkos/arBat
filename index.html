@@ -6,7 +6,13 @@
   <a-scene embedded arjs='sourceType: webcam;'>
 
     <a-marker type='pattern' url='pattern-ba.patt'>
-      <a-box position='0 0.5 0' material='color: red;'></a-box>
+			<a-assets>
+		    <a-asset-item id="fence-obj" src="fence01.obj"></a-asset-item>
+		    <a-asset-item id="fence-mtl" src="fence01.mtl"></a-asset-item>
+		  </a-assets>
+
+			<!-- Using the asset management system. -->
+  		<a-obj-model src="#fence-obj" mtl="#fence-mtl"></a-obj-model>
     </a-marker>
 
     <a-entity camera></a-entity>
