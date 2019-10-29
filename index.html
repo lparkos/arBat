@@ -1,4 +1,3 @@
-
 <!doctype HTML>
 <html>
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
@@ -6,8 +5,8 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-  	<a-marker-camera type='pattern' patternUrl='pattern-bat.patt'>
-      <a-box position='0 1 0' material='color: blue;'>
+  	<a-marker type='pattern' patternUrl='./pattern-bat.patt'>
+      <a-box position='0 1 0' material='color: green;'>
         <a-animation attribute="rotation"
           dur="2000"
           fill="forwards"
@@ -16,7 +15,7 @@
           repeat="indefinite"></a-animation>
       </a-box>
       </a-entity>
-  	</a-marker-camera>
+  	</a-marker>
   	<a-entity camera></a-entity>
     </a-scene>
   </body>
