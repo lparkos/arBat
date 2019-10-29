@@ -6,9 +6,12 @@
   <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
   	<a-marker preset=’hiro’>
-			<a-entity scale="0.05 0.03 0.02"
-              <a-text value="Hello, World!"></a-text>
-        </a-entity>
+			<a-assets>
+        <a-asset-item id="skel-obj" src="obj/group4.obj"></a-asset-item>
+        <a-asset-item id="skel-mtl" src="obj/group4.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity obj-model="obj: #skel-obj; mtl: #skel-mtl"></a-entity>
 
   	</a-marker>
   	<a-entity camera></a-entity>
