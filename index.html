@@ -6,7 +6,7 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
   <body style='margin : 0px; overflow: hidden;'>
     <a-scene stats embedded arjs='trackingMethod: best; debugUIEnabled: false'>
-  	<a-marker type='pattern' patternUrl='pattern-bat.patt'>
+  	<a-marker-camera type='pattern' patternUrl='pattern-bat.patt'>
       <a-box position='0 1 0' material='color: blue;'>
         <a-animation attribute="rotation"
           dur="2000"
@@ -16,7 +16,7 @@
           repeat="indefinite"></a-animation>
       </a-box>
       </a-entity>
-  	</a-marker>
+  	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
   </body>
