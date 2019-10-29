@@ -1,16 +1,18 @@
-<!doctype HTML>
-<html>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs=’sourceType: webcam;’>
-  	<a-marker preset=’hiro’>
-			<a-entity scale="0.05 0.03 0.02"
-            obj-model=”obj: url(obj/group4.obj);
-            mtl: url(obj/group4.mtl)”>
-        </a-entity>
-  	</a-marker>
-  	<a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
+<script src="vendor/aframe/aframe.min.js"></script>
+<script src="vendor/aframe/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
+  <a-assets>
+    <a-asset-item id="tree-model" src="https://raw.githubusercontent.com/TimVanMourik/ChristmasAR/master/data/Tree.dae" crossOrigin="anonymous"></a-asset-item>
+    <a-asset-item id="text-model" src="https://raw.githubusercontent.com/TimVanMourik/ChristmasAR/master/data/MerryChristmas.dae" crossOrigin="anonymous"></a-asset-item>
+  </a-assets>
+    <a-anchor hit-testing-enabled='true'>
+      <a-collada-model src="#tree-model"  position="0 0 0" scale="1 1 1" rotation="0 0 0">
+	  </a-collada-model>
+	  <a-collada-model src="#text-model"  position="0 0 0" scale="1 1 1">
+		<a-animation attribute="rotation" to="0 360 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+	  </a-collada-model>
+    </a-anchor>
+	<a-camera-static/>
+  </a-scene>
+</body>
