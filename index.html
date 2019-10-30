@@ -8,12 +8,12 @@
   <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
 
     <a-assets>
-        <a-asset-item id="bat" fbx-model="src: url(obj/halloweenBat.FBX);""></a-asset-item>
-      </a-assets>
+  <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+</a-assets>
 
 
   	<a-marker preset='hiro'>
-      <a-entity fbx-model="src: url(obj/halloweenBat.FBX);"></a-entity>
+      <a-entity gltf-model="#cityModel" modify-materials></a-entity>
   	</a-marker>
 
     </a-scene>
