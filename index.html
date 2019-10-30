@@ -42,29 +42,7 @@
         <a-asset-item id="ghost-mtl" src="obj/fence01_obj/fence01.mtl"></a-asset-item>
       </a-assets>
 
-
-      <a-marker preset="hiro"
-         type="pattern"
-         url="https://cdn.glitch.com/3ad7f205-431e-4625-972a-dccac34ec70a%2Fpattern-ghosticn-thin.patt?v=1572198083424"
-         size="1"
-         min-confidence="0.6"
-         smooth="false"
-         smooth-count="5"
-         smooth-tolerance="0.01"
-         smooth-threshold="2"
-      >
-        <!-- <a-entity
-            obj-model="obj:#ghost"
-            position="0 0 0"
-            rotation="-180 0 0"
-            scale="0.04 0.04 0.04"
-            material="color: white;">
-        </a-entity> -->
-
-        <a-obj-model src="#ghost-obj" mtl="#ghost-mtl"></a-obj-model>
-
-
-      </a-marker>
+      <a-obj-model src="#ghost-obj" mtl="#ghost-mtl"></a-obj-model>
 
       <a-entity camera></a-entity>
 
