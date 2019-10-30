@@ -8,13 +8,12 @@
 
     <a-assets>
       <a-asset-item id="skel-obj" src="obj/Group4.obj"></a-asset-item>
-      <a-asset-item id="skel-3ds" src="obj/Group4.3ds"></a-asset-item>
       <a-asset-item id="skel-mtl" src="obj/Group4.mtl"></a-asset-item>
     </a-assets>
 
 
   	<a-marker-camera preset=’hiro’>
-      <a-entity scale="0.25 0.25 0.25" obj-model="obj: #skel-obj; mtl: #skel-mtl; 3ds: #skel-3ds;"></a-entity>
+      <a-entity obj-model="obj: #skel-obj; mtl: #skel-mtl"></a-entity>
   	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
