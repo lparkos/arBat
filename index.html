@@ -32,81 +32,9 @@ https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
 -->
 
     <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
-      <!-- <a-assets> -->
-        <!-- <img id="sky" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/primitives/models/peach-gradient.jpg"> -->
-
-          <!-- <a-asset-item id="pumpkin-obj" src="https://cdn.glitch.com/2490e087-2c10-40b2-9203-45905f012708%2Fmodel.obj?1505214947386"></a-asset-item>
-          <a-asset-item id="pumpkin-mtl" src="https://cdn.glitch.com/2490e087-2c10-40b2-9203-45905f012708%2Fmaterials.mtl?1505214946518"></a-asset-item> -->
-
-        <!-- <a-mixin id="light"
-                 geometry="primitive: sphere; radius: 1.5"
-                 material="color: #ffbc00; shader: flat"
-                 light="color: #FF9100; distance: 120; intensity: 1.4; type: point;
-                "> </a-mixin> -->
-      <!-- </a-assets> -->
-
-      <a-marker preset="hiro">
-
-      <a-cylinder color="crimson" height="50" radius="20" position=" 0 -25 0" shadow="receive: true"></a-cylinder>
-
-      <!--user-->
-      <!-- <a-cylinder color="crimson" height="46" radius="4" position=" 0 -25 24.5"></a-cylinder> -->
-
-
-      <!--bacground-->
-      <!-- <a-cylinder color="crimson" height="70" radius="10" position=" 50 -25 -20"></a-cylinder>
-      <a-entity obj-model="obj: #pumpkin-obj; mtl: #pumpkin-mtl" scale="50 50 50" position="50 21 -20" rotation="-26 158 -0.5"> </a-entity> -->
-
-      <!--
-      <a-cylinder color="crimson" height="90" radius="7" position=" -30 -25 -40"></a-cylinder>
-      <a-cylinder color="crimson" height="110" radius="5" position=" -80 -25 -80"></a-cylinder>
-      <a-cylinder color="crimson" height="200" radius="5" position=" -100 -25 -20"></a-cylinder>
--->
-
-
-
-
+      <a-marker-camera preset="hiro">
+        <a-cylinder color="crimson" height="50" radius="20" position=" 0 -25 0" shadow="receive: true"></a-cylinder>
       </a-marker-camera>
-
-      <!--  lights
-       <a-entity animation="property: rotation; to: 0 0 360; dur: 12000; easing: linear; loop: true">
-        <a-entity mixin="light" position="30 0 0"></a-entity>
-      </a-entity>
-
-      <a-entity animation="property: rotation; to: 360 0 0; dur: 8000; easing: linear; loop: true">
-        <a-entity mixin="light" position="0 0 40"></a-entity>
-      </a-entity>
--->
-
-      <!--
-      <a-plane rotation="-90 0 0"
-               color="#AAAAAA"
-               height="200"
-               width="200"
-               shadow="receive:true"></a-plane>
--->
-      <!-- <a-sky src="#sky"></a-sky>
-
-      <a-entity
-      environment=" horizonColor: #ec5d00; dressingOnPlayArea: 0; dressingAmount:100; lightPosition: 8 20 15 dressingUniformScale: false; shadow: true;  preset: goldmine" >
-      </a-entity> -->
-
-
-
-            <!-- <a-sky src="#sky"></a-sky> -->
-
-
-<!--
-      <a-entity shadow-light="type:directional;
-                              castShadow:true;
-                              color:#888;
-                              shadowMapWidth:1024;
-                              shadowMapHeight:1024;
-                              shadowCameraRight:20;
-                              shadowCameraTop:20;
-                              shadowCameraLeft:-20;
-                              shadowCameraBottom:-20"
-                position="-20 20 20"></a-entity> -->
     </a-scene>
   </body>
 </html>
