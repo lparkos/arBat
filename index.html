@@ -7,33 +7,13 @@
   <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
 
     <a-assets>
-      <a-asset-item id="pumpkin-obj" src="https://cdn.glitch.com/2490e087-2c10-40b2-9203-45905f012708%2Fmodel.obj?1505214947386"></a-asset-item>
-          <a-asset-item id="pumpkin-mtl" src="https://cdn.glitch.com/2490e087-2c10-40b2-9203-45905f012708%2Fmaterials.mtl?1505214946518"></a-asset-item>
-
-        <a-mixin id="light"
-                 geometry="primitive: sphere; radius: 1.5"
-                 material="color: #ffbc00; shader: flat"
-                 light="color: #FF9100; distance: 120; intensity: 1.4; type: point;
-                "> </a-mixin>
+      <a-asset-item id="skel-obj" src="obj/Group4.obj"></a-asset-item>
+      <a-asset-item id="skel-mtl" src="obj/Group4.mtl"></a-asset-item>
     </a-assets>
-
-    <a-entity position="0 10 24">
-      	<a-camera></a-camera>
-      </a-entity>
 
 
   	<a-marker-camera preset=’hiro’>
-      <a-entity obj-model="obj: #pumpkin-obj; mtl: #pumpkin-mtl" scale="50 50 50" position="50 21 -20" rotation="-26 158 -0.5"> </a-entity>
-      <a-entity mmd="audio:https://cdn.glitch.com/2490e087-2c10-40b2-9203-45905f012708%2Ftombstonespookyscaryskeletonsremix-final-extended-1.mp3?1505211968500;
-                     audioDelayTime:3; afterglow:2.0;">
-        <a-entity mmd-model="model:https://cdn.rawgit.com/uveavanto/mmd/c6397158/Skeleton/Skeleton.pmx;
-                             vmd:https://rawgit.com/uveavanto/mmd/master/vmd/8.vmd;
-                             physics:false;"
-                  shadow="cast:true"
-                  position="0 0 0"
-                  ></a-entity>
-      </a-entity>
-
+      <a-entity scale="0.25 0.25 0.25" obj-model="obj: #skel-obj; mtl: #skel-mtl"></a-entity>
   	</a-marker-camera>
   	<a-entity camera></a-entity>
     </a-scene>
