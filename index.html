@@ -8,12 +8,12 @@
   <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
 
     <a-assets>
-        <a-asset-item id="bat" src="obj/scene.gltf"></a-asset-item>
+        <a-asset-item id="bat" fbx-model="obj/scene.gltf"></a-asset-item>
       </a-assets>
 
 
   	<a-marker preset='hiro'>
-      <a-entity gltf-model="#bat" rotation= "0 0 0">
+      <a-entity fbx-model="#bat" rotation= "0 0 0">
       </a-entity>
   	</a-marker>
 
