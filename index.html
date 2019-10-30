@@ -14,13 +14,13 @@
 
     <link rel="stylesheet" href="/style.css">
     <script>
-      window.onload = function(){
-          setTimeout(function(){
-              var resizeEvent = window.document.createEvent('UIEvents');
-              resizeEvent.initUIEvent('resize', true, false, window, 0);
-              window.dispatchEvent(resizeEvent);
-          }, 3000);
-      };
+      // window.onload = function(){
+      //     setTimeout(function(){
+      //         var resizeEvent = window.document.createEvent('UIEvents');
+      //         resizeEvent.initUIEvent('resize', true, false, window, 0);
+      //         window.dispatchEvent(resizeEvent);
+      //     }, 3000);
+      // };
     </script>
 </head>
 
@@ -29,7 +29,7 @@
       <a-scene
           embedded
           arjs="sourceType: webcam;
-                debugUIEnabled: false;
+                debugUIEnabled: true;
                 patternRatio: 0.5;
                 "
           vr-mode-ui="enabled: false"
@@ -53,7 +53,7 @@
       >
         <a-entity
             obj-model="obj:#ghost"
-            position="0 0 0"
+            position="0.4 0.8 2"
             rotation="-180 0 0"
             scale="0.04 0.04 0.04"
             material="color: white;">
