@@ -5,16 +5,17 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
-  	<a-marker preset=’hiro’>
-			<a-assets>
-        <a-asset-item id="skel-obj" src="obj/group4.obj"></a-asset-item>
-        <a-asset-item id="skel-mtl" src="obj/group4.mtl"></a-asset-item>
-      </a-assets>
+
+    <a-assets>
+      <a-asset-item id="skel-obj" src="obj/group4.obj"></a-asset-item>
+      <a-asset-item id="skel-mtl" src="obj/group4.mtl"></a-asset-item>
+    </a-assets>
 
 
-
-  	</a-marker>
-  	<a-entity obj-model="obj: #skel-obj; mtl: #skel-mtl"></a-entity>
+  	<a-marker-camera preset=’hiro’>
+      <a-entity obj-model="obj: #skel-obj; mtl: #skel-mtl"></a-entity>
+  	</a-marker-camera>
+  	<a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
