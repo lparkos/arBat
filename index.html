@@ -12,14 +12,26 @@
     <!-- add this script in order to load a large set of 3D model extensions-->
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
 
-    <a-scene embedded arjs>
+      <a-scene
+          embedded
+          arjs="sourceType: webcam;
+                debugUIEnabled: false;
+                patternRatio: 0.9;
+                "
+          vr-mode-ui="enabled: false"
+      >
+
+
       <a-assets>
         <a-asset-item id="ghost" src="https://cdn.glitch.com/3ad7f205-431e-4625-972a-dccac34ec70a%2Fghost.obj?v=1572204556924"></a-asset-item>
       </a-assets>
+
 
 
       <a-marker
@@ -34,7 +46,7 @@
       >
         <a-entity
             obj-model="obj:#ghost"
-            position="0.4 0.8 2"
+            position="0 0 0"
             rotation="-180 0 0"
             scale="0.04 0.04 0.04"
             material="color: white;">
