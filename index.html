@@ -18,8 +18,8 @@
       <a-scene
           embedded
           arjs="sourceType: webcam;
-                debugUIEnabled: false;
-                patternRatio: 0.7;
+                debugUIEnabled: true;
+                patternRatio: 0.9;
                 "
           vr-mode-ui="enabled: false"
       >
@@ -29,7 +29,7 @@
         <a-asset-item id="ghost" src="https://cdn.glitch.com/3ad7f205-431e-4625-972a-dccac34ec70a%2Fghost.obj?v=1572204556924"></a-asset-item>
       </a-assets>
 
-      <a-marker preset="hiro">
+      <a-marker preset='hiro'>
         <a-entity
             obj-model="obj:#ghost"
             position="0 -5 10"
