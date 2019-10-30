@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!-- <!doctype HTML>
 <html>
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -17,7 +17,7 @@
   	</a-marker-camera>
     </a-scene>
   </body>
-</html>
+</html> -->
 
 
 <!-- This is a static file -->
@@ -63,7 +63,7 @@ The license of MMD assets used here
 https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
 -->
 
-    <a-scene antialias="true" outline fog="type: exponential; color: #282628">
+    <a-scene embedded arjs='trackingMethod: best; debugUIEnabled:false'>
       <a-assets>
         <img id="sky" src="https://cdn.rawgit.com/aframevr/aframe/master/examples/primitives/models/peach-gradient.jpg">
 
@@ -77,9 +77,7 @@ https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
                 "> </a-mixin>
       </a-assets>
 
-      <a-marker-camera position="0 10 24" preset=’hiro’>
-
-
+      <a-marker-camera preset=’hiro’ position="0 10 24">
 
 
       <!--main skel dancing platform-->
@@ -138,9 +136,8 @@ https://github.com/mrdoob/three.js/tree/dev/examples/models/mmd#readme
 
 
             <a-sky src="#sky"></a-sky>
-      </a-marker-camera>
 
-
+            </a-marker-camera>
 <!--
       <a-entity shadow-light="type:directional;
                               castShadow:true;
